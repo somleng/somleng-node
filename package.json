@@ -1,0 +1,14 @@
+{
+  "name": "somleng",
+  "version": "4.8.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "twilio": "^4.8.0"
+  }
+}
