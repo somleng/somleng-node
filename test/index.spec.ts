@@ -1,5 +1,6 @@
 import { Somleng } from "../src";
 import somleng from "../src";
+import nock from "nock";
 
 describe("Somleng", () => {
   const env = process.env;
@@ -19,6 +20,7 @@ describe("Somleng", () => {
     expect(somleng.username).toEqual("account-sid");
     expect(somleng.accountSid).toEqual("account-sid");
     expect(somleng.password).toEqual("auth-token");
+    expect(somleng.api.baseUrl).toEqual("https://api.somleng.org");
   });
 
   it("should be able to instantiate Somleng client with credentials from env", () => {
@@ -38,5 +40,19 @@ describe("Somleng", () => {
     expect(client.username).toEqual("account-sid");
     expect(client.accountSid).toEqual("account-sid");
     expect(client.password).toEqual("auth-token");
+  });
+
+  it("should be able to fetch a record", async () => {
+    const scope = nock("https://api.somleng.org")
+      .get("/2010-04-01/Accounts/account-sid/Calls/phone-call-id-123.json")
+      .basicAuth({ user: "account-sid", pass: "auth-token" })
+      .reply(200, { sid: "phone-call-id-123" });
+
+    const somleng = new Somleng("account-sid", "auth-token");
+
+    const response = await somleng.calls("phone-call-id-123").fetch();
+    scope.done();
+
+    expect(response.sid).toEqual("phone-call-id-123");
   });
 });
