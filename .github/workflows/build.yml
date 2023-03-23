@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - run: npm ci --no-audit
+      - run: npm ci
       - run: npm run lint --if-present
       - run: npm test
       - run: npm run build

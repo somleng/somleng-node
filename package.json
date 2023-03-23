@@ -1,7 +1,25 @@
 {
   "name": "somleng",
   "version": "4.8.0",
-  "description": "",
+  "description": "A Twilio helper library",
+  "author": "Somleng Team <contact@somleng.com>",
+  "contributors": [
+    {
+      "name": "somleng-node contributors",
+      "url": "https://github.com/somleng/somleng-node/graphs/contributors"
+    },
+    {
+      "name": "twilio-node contributors",
+      "url": "https://github.com/twilio/twilio-node/graphs/contributors"
+    }
+  ],
+  "keywords": [
+    "somleng",
+    "voice",
+    "sms",
+    "rest",
+    "api"
+  ],
   "main": "./lib/index.js",
   "files": [
     "lib/**/*"
@@ -13,7 +31,6 @@
     "test:watch": "jest --watch",
     "test": "jest --coverage"
   },
-  "author": "",
   "license": "MIT",
   "dependencies": {
     "twilio": "^4.8.0"
@@ -25,5 +42,9 @@
     "nock": "^13.3.0",
     "ts-jest": "^29.0.5",
     "typescript": "^5.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/somleng/somleng-node.git"
   }
 }
