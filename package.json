@@ -1,6 +1,6 @@
 {
   "name": "somleng",
-  "version": "4.8.0",
+  "version": "4.9.0",
   "description": "A Twilio helper library",
   "author": "Somleng Team <contact@somleng.com>",
   "contributors": [
@@ -21,6 +21,7 @@
     "api"
   ],
   "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "files": [
     "lib/**/*"
   ],
@@ -33,7 +34,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "twilio": "^4.8.0"
+    "twilio": "^4.9.0"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.2",
