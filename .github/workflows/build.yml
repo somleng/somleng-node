@@ -8,7 +8,53 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ".tool-versions"
+          cache: 'npm'
+
       - run: npm ci
       - run: npm run lint --if-present
       - run: npm test
       - run: npm run build
+
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+
+    if: github.ref == 'refs/heads/main'
+    needs:
+      - build
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ".tool-versions"
+          cache: 'npm'
+
+      - name: Setup node packages
+        run: |
+          npm ci
+          npm run build
+
+      - name: Get release version
+        id: get_release_version
+        run: |
+          version=$(npm pkg get version | xargs echo)
+          twilio_version=$(npm info twilio version | xargs echo)
+          echo "version=$version" >> $GITHUB_OUTPUT
+          echo "twilio_version=$twilio_version" >> $GITHUB_OUTPUT
+
+      - uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          release-type: node
+          release-as: ${{ steps.get_release_version.outputs.twilio_version }}
+          labels: prepare_release
+          token: ${{ secrets.SOMLENG_PERSONAL_ACCESS_TOKEN }}
