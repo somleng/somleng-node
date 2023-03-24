@@ -52,8 +52,13 @@ jobs:
           echo "twilio_version=$twilio_version" >> $GITHUB_OUTPUT
 
       - uses: google-github-actions/release-please-action@v3
-        id: release-please
+        id: release
         if: ${{ steps.get_release_version.outputs.version != steps.get_release_version.outputs.twilio_version}}
         with:
           release-type: node
           release-as: ${{ steps.get_release_version.outputs.twilio_version }}
+
+      - name: Set automerge label on PR
+        if: ${{ steps.release.outputs.release_created}}
+        run: |
+          gh pr edit ${{ steps.release.outputs.pr.number }} --add-label "automerge"
