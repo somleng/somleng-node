@@ -56,4 +56,4 @@ jobs:
         if: ${{ steps.get_release_version.outputs.version != steps.get_release_version.outputs.twilio_version}}
         with:
           release-type: node
-          release-as: ${{ steps.get_release_version.outputs.version }}
+          release-as: ${{ steps.get_release_version.outputs.twilio_version }}
