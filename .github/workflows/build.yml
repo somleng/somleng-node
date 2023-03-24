@@ -57,13 +57,12 @@ jobs:
 
       - uses: google-github-actions/release-please-action@v3
         id: release
-        if: ${{ steps.get_release_version.outputs.version != steps.get_release_version.outputs.twilio_version}}
         with:
           release-type: node
           release-as: ${{ steps.get_release_version.outputs.twilio_version }}
 
       - name: Set automerge label on PR
-        if: ${{ steps.get_release_version.release_created }}
+        if: ${{ !steps.release.release_created }}
         run: |
           gh pr edit ${{ steps.release.outputs.pr.number }} --add-label "automerge"
         env:
