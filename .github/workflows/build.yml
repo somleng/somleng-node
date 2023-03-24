@@ -24,7 +24,7 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
 
-    if: github.ref == 'refs/heads/setup_build'
+    if: github.ref == 'refs/heads/main'
     needs:
       - build
 
