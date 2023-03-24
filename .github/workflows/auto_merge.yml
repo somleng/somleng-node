@@ -4,9 +4,6 @@ on:
     types:
       - labeled
 
-  check_suite:
-    types: [completed]
-
 jobs:
   auto-merge:
     if: ${{ github.actor == 'dependabot[bot]' || github.event.label.name == 'prepare_release' }}

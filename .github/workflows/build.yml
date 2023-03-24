@@ -46,9 +46,7 @@ jobs:
       - name: Get release version
         id: get_release_version
         run: |
-          version=$(npm pkg get version | xargs echo)
           twilio_version=$(npm info twilio version | xargs echo)
-          echo "version=$version" >> $GITHUB_OUTPUT
           echo "twilio_version=$twilio_version" >> $GITHUB_OUTPUT
 
       - uses: google-github-actions/release-please-action@v3
