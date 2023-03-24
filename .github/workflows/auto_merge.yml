@@ -3,12 +3,14 @@ on: pull_request
 
 jobs:
   auto-merge:
-    if: ${{ github.actor == 'dependabot[bot]' || contains(github.event.pull_request.labels.*.name, 'prepare_release')  }}
     runs-on: ubuntu-latest
 
     steps:
       - name: Auto merge PR
-        run: gh pr merge --auto --merge "$PR_URL"
+        run: |
+          echo  ${{ github.event.pull_request.labels.*.name }}
+          echo  ${{ contains(github.event.pull_request.labels.*.name, 'prepare_release') }}
+          gh pr merge --auto --merge "$PR_URL"
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
           GITHUB_TOKEN: ${{ secrets.SOMLENG_PERSONAL_ACCESS_TOKEN }}
