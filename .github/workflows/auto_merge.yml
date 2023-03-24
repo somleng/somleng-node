@@ -2,20 +2,19 @@ name: auto-merge
 on:
   pull_request:
     types:
-      - opened
+      - labeled
 
   check_suite:
     types: [completed]
 
 jobs:
   auto-merge:
+    if: ${{ github.actor == 'dependabot[bot]' || github.event.label.name, 'prepare_release' }}
     runs-on: ubuntu-latest
 
     steps:
       - name: Auto merge PR
         run: |
-          echo  ${{ toJSON(github.event.pull_request.labels.*.name) }}
-          echo  ${{ toJSON(github.event.pull_request.labels) }}
           gh pr merge --auto --merge "$PR_URL"
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
