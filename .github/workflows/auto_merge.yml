@@ -9,7 +9,7 @@ on:
 
 jobs:
   auto-merge:
-    if: ${{ github.actor == 'dependabot[bot]' || github.event.label.name, 'prepare_release' }}
+    if: ${{ github.actor == 'dependabot[bot]' || github.event.label.name == 'prepare_release' }}
     runs-on: ubuntu-latest
 
     steps:
