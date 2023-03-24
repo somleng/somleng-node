@@ -25,7 +25,6 @@ permissions:
 jobs:
   auto-merge:
     runs-on: ubuntu-latest
-    if: ${{ github.actor == 'dependabot[bot]' || github.actor == 'github-actions[bot]' }}
     steps:
       - name: Enable auto-merge
         run: gh pr merge --auto --merge "$PR_URL"
