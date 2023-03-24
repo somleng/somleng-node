@@ -64,6 +64,7 @@ jobs:
       - name: Set automerge label on PR
         if: ${{ !steps.release.release_created }}
         run: |
+          echo ${{ steps.release.outputs.pr }}
           gh pr edit ${{ steps.release.outputs.pr.number }} --add-label "automerge"
         env:
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
