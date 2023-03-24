@@ -30,7 +30,7 @@ jobs:
         run: echo ${{ github.actor }}
 
       - name: Enable auto-merge
-        if: ${{ github.actor == 'dependabot[bot]' || github.actor == 'github-actions[bot] }}
+        if: ${{ github.actor == 'dependabot[bot]' || github.actor == 'github-actions[bot]' || github.actor == 'samnang' }}
         run: gh pr merge --auto --merge "$PR_URL"
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
