@@ -2,10 +2,6 @@ name: Build
 
 on: [push]
 
-permissions:
-  contents: write
-  pull-requests: write
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -60,9 +56,5 @@ jobs:
         with:
           release-type: node
           release-as: ${{ steps.get_release_version.outputs.twilio_version }}
-
-      - name: Automerge PR
-        if: ${{ steps.release.outputs.pr }}
-        run: gh pr merge --auto --merge ${{ fromJSON(steps.release.outputs.pr).number }}
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          labels: prepare_release
+          token: ${{ secrets.SOMLENG_PERSONAL_ACCESS_TOKEN }}
