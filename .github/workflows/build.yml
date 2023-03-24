@@ -63,6 +63,7 @@ jobs:
           release-as: ${{ steps.get_release_version.outputs.twilio_version }}
 
       - name: Set automerge label on PR
+        if: ${{ steps.get_release_version.release_created }}
         run: |
           gh pr edit ${{ steps.release.outputs.pr.number }} --add-label "automerge"
         env:
