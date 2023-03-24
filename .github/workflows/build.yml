@@ -61,10 +61,8 @@ jobs:
           release-type: node
           release-as: ${{ steps.get_release_version.outputs.twilio_version }}
 
-      - name: Set automerge label on PR
+      - name: Automerge PR
         if: ${{ steps.release.outputs.pr }}
-        run: |
-          gh label create "automerge" --force
-          gh pr edit ${{ fromJSON(steps.release.outputs.pr).number }} --add-label "automerge"
+        run: gh pr merge --auto --merge ${{ fromJSON(steps.release.outputs.pr).number }}
         env:
-          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
