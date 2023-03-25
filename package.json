@@ -1,7 +1,7 @@
 {
   "name": "somleng",
-  "version": "1.0.0",
-  "description": "A Twilio helper library",
+  "version": "4.9.0",
+  "description": "A Somleng helper library",
   "author": "Somleng Dev Team <dev@somleng.com>",
   "contributors": [
     {
