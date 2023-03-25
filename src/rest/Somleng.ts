@@ -18,7 +18,7 @@ class Somleng extends Twilio {
     this.username = username;
     this.accountSid = username;
     this.password = password;
-    this.api.baseUrl = "https://api.somleng.org";
+    this.api.baseUrl = process.env.SOMLENG_API_BASE_URL || "https://api.somleng.org";
   }
 }
 
