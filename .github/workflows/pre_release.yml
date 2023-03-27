@@ -43,6 +43,7 @@ jobs:
       - name: Auto merge PR
         if: ${{ steps.pre-release.outputs.pr }}
         run: |
+          echo ${{ steps.pre-release.outputs.pr }}
           gh pr merge --auto --merge "$PR_URL"
         env:
           PR_URL: ${{ fromJSON(steps.pre-release.outputs.pr).number }}
