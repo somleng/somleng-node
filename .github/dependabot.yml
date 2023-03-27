@@ -4,8 +4,15 @@ updates:
     directory: "/"
     commit-message:
       prefix: "feat"
+      prefix-development: "dev"
     schedule:
       interval: "daily"
+    allow:
+      - dependency-name: "twilio"
+        dependency-type: "production"
+
+      - dependency-name: "*"
+        dependency-type: "development"
 
   - package-ecosystem: "github-actions"
     directory: "/"
