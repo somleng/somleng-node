@@ -37,6 +37,7 @@ jobs:
         with:
           release-type: node
           release-as: ${{ steps.get_release_version.outputs.twilio_version }}
+          token: ${{ secrets.SOMLENG_PERSONAL_ACCESS_TOKEN }}
 
       - uses: actions/checkout@v3
         if: ${{ steps.release.outputs.release_created }}
