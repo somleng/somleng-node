@@ -3,10 +3,6 @@ on:
   pull_request:
     types:
       - opened
-    branches:
-      - 'dependabot/**'
-      - 'release-please--branches-**'
-
 jobs:
   auto-merge:
     runs-on: ubuntu-latest
