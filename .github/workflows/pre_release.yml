@@ -44,7 +44,6 @@ jobs:
         if: ${{ steps.pre-release.outputs.pr }}
         run: |
           echo ${{ steps.pre-release.outputs.pr }}
-          gh pr merge --auto --merge "$PR_URL"
+          gh pr merge --auto --merge "${{ fromJSON(steps.pre-release.outputs.pr).number }}"
         env:
-          PR_URL: ${{ fromJSON(steps.pre-release.outputs.pr).number }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
