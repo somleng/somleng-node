@@ -5,7 +5,7 @@ on:
       - opened
     branches:
       - 'dependabot/**'
-      - 'release-please--branches--main-**'
+      - 'release-please--branches-**'
 
 jobs:
   auto-merge:
