@@ -33,7 +33,7 @@ client.calls
     })
   .then(call => console.log(call.sid));
 
-  // List calls
+// List calls
 client.calls.list({limit: 20})
             .then(calls => calls.forEach(c => console.log(c.sid)));
 ```
