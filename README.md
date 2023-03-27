@@ -4,9 +4,13 @@
 
 [![Build](https://github.com/somleng/somleng-node/actions/workflows/build.yml/badge.svg)](https://github.com/somleng/somleng-node/actions/workflows/build.yml)
 
-Node.js helper library for [Somleng](https://www.somleng.org/).
+Node.js helper library for [Somleng's](https://www.somleng.org/) [REST API](https://www.somleng.org/docs/twilio_api).
 
 Note: This library wraps [Twilio Node](https://github.com/twilio/twilio-node) and adds support for Somleng.
+
+## Versioning
+
+`somleng-node` follows [Twilio Node](https://github.com/twilio/twilio-node) versioning.
 
 ## Installation
 
@@ -14,8 +18,30 @@ Note: This library wraps [Twilio Node](https://github.com/twilio/twilio-node) an
 
 ## Sample Usage
 
-Check out these [code examples](examples) in JavaScript and TypeScript to get up and running quickly.
+```js
+// Client Initialization
+const accountSid = process.env.SOMLENG_ACCOUNT_SID;
+const authToken = process.env.SOMLENG_AUTH_TOKEN;
+const client = require('somleng')(accountSid, authToken);
 
-### Environment Variables
+// Create a call
+client.calls
+  .create({
+      twiml: '<Response><Say>Ahoy, World!</Say></Response>',
+      to: '+14155551212',
+      from: '+15017122661'
+    })
+  .then(call => console.log(call.sid));
 
-`somleng-node` supports credential storage in environment variables. If no credentials are provided when instantiating the Somleng client (e.g., `const client = require('somleng')();`), the values in following env vars will be used: `SOMLENG_ACCOUNT_SID` and `SOMLENG_AUTH_TOKEN`. You can also set `SOMLENG_API_BASE_URL` to override the API endpoint.
+  // List calls
+client.calls.list({limit: 20})
+            .then(calls => calls.forEach(c => console.log(c.sid)));
+```
+
+## Environment Variables
+
+`somleng-node` supports credential storage in environment variables. If no credentials are provided when instantiating the Somleng client (e.g., `const client = require('somleng')();`), the values in following env vars will be used: `SOMLENG_ACCOUNT_SID` and `SOMLENG_AUTH_TOKEN`.
+
+## License
+
+The software is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).

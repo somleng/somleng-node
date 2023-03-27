@@ -1,4 +1,5 @@
-import { ClientOpts, Twilio } from "twilio";
+import { Twilio } from "twilio";
+import { ClientOpts } from "../base/BaseSomleng";
 
 class Somleng extends Twilio {
   constructor(username?: string, password?: string, opts?: ClientOpts) {
@@ -18,7 +19,7 @@ class Somleng extends Twilio {
     this.username = username;
     this.accountSid = username;
     this.password = password;
-    this.api.baseUrl = process.env.SOMLENG_API_BASE_URL || "https://api.somleng.org";
+    this.api.baseUrl = opts?.apiBaseUrl || "https://api.somleng.org";
   }
 }
 

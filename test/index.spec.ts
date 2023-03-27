@@ -20,20 +20,17 @@ describe("Somleng", () => {
     expect(somleng.username).toEqual("account-sid");
     expect(somleng.accountSid).toEqual("account-sid");
     expect(somleng.password).toEqual("auth-token");
-    expect(somleng.api.baseUrl).toEqual("https://api.somleng.org");
   });
 
   it("should be able to instantiate Somleng client with credentials from env", () => {
     process.env.SOMLENG_ACCOUNT_SID = "account-sid";
     process.env.SOMLENG_AUTH_TOKEN = "auth-token";
-    process.env.SOMLENG_API_BASE_URL = "https://api.example.com"
 
     const somleng = new Somleng();
 
     expect(somleng.username).toEqual("account-sid");
     expect(somleng.accountSid).toEqual("account-sid");
     expect(somleng.password).toEqual("auth-token");
-    expect(somleng.api.baseUrl).toEqual("https://api.example.com");
   });
 
   it("should be able to instantiate Somleng client with the function", () => {
@@ -42,6 +39,15 @@ describe("Somleng", () => {
     expect(client.username).toEqual("account-sid");
     expect(client.accountSid).toEqual("account-sid");
     expect(client.password).toEqual("auth-token");
+  });
+
+  it("should be able to instantiate Somleng client with client opts", () => {
+    const client = somleng("account-sid", "auth-token", { apiBaseUrl: "https://api.example.com" });
+
+    expect(client.username).toEqual("account-sid");
+    expect(client.accountSid).toEqual("account-sid");
+    expect(client.password).toEqual("auth-token");
+    expect(client.api.baseUrl).toEqual("https://api.example.com");
   });
 
   it("should be able to fetch a record", async () => {

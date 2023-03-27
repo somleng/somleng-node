@@ -1,4 +1,4 @@
-import { ClientOpts as IClientOpts } from "twilio";
+import { ClientOpts as IClientOpts } from "./base/BaseSomleng";
 import ISomleng from "./rest/Somleng";
 
 // Shorthand to automatically create a RestClient
