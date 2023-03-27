@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.9.2](https://github.com/somleng/somleng-node/compare/v4.9.1...v4.9.2) (2023-03-27)
+
+
+### Bug Fixes
+
+* build ([ef63ccd](https://github.com/somleng/somleng-node/commit/ef63ccdb92af168c7c885a159492c3122d304aab))
+
 ## [4.9.1](https://github.com/somleng/somleng-node/compare/v4.9.0...v4.9.1) (2023-03-27)
 
 
