@@ -19,3 +19,32 @@ jobs:
       - run: npm run lint --if-present
       - run: npm test
       - run: npm run build
+
+  release:
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          release-type: node
+
+      - name: Skipped if no releases
+        if: ${{ ! steps.release.outputs.release_created }}
+        run: exit 0
+
+      - uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ".tool-versions"
+          cache: 'npm'
+
+      - name: Setup node packages
+        run: |
+          npm ci
+          npm run build
+          # npm publish
