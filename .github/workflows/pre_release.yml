@@ -1,9 +1,7 @@
 name: Pre-release
-on: push
-
-permissions:
-  contents: write
-  pull-requests: write
+on:
+  schedule:
+    - cron: "10 * * * *"
 
 jobs:
   pre-release:
@@ -46,4 +44,4 @@ jobs:
           echo ${{ steps.pre-release.outputs.pr }}
           gh pr merge --auto --merge "${{ fromJSON(steps.pre-release.outputs.pr).number }}"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.SOMLENG_PERSONAL_ACCESS_TOKEN }}
