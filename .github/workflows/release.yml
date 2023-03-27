@@ -1,8 +1,8 @@
 name: Release
 on:
-  push:
-    branches:
-      - "main"
+  pull_request:
+    types:
+      - closed
 
 permissions:
   contents: write
@@ -12,6 +12,7 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'release')
 
     steps:
       - name: Checkout
