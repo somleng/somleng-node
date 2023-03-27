@@ -26,10 +26,17 @@ jobs:
     if: github.ref == 'refs/heads/main'
 
     steps:
+      - name: Get release version
+        id: get_release_version
+        run: |
+          twilio_version=$(npm info twilio version | xargs echo)
+          echo "twilio_version=$twilio_version" >> $GITHUB_OUTPUT
+
       - uses: google-github-actions/release-please-action@v3
         id: release
         with:
           release-type: node
+          release-as: ${{ steps.get_release_version.outputs.twilio_version }}
 
       - uses: actions/checkout@v3
         if: ${{ steps.release.outputs.release_created }}
