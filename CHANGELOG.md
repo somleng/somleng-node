@@ -1,5 +1,12 @@
 # Changelog
 
+## 4.9.0 (2023-03-28)
+
+
+### Features
+
+* Bump version ([0a132c1](https://github.com/somleng/somleng-node/commit/0a132c163cb34cc97a3808a46f7f6e23fcc98242))
+
 ## [4.9.0](https://github.com/somleng/somleng-node/compare/v4.9.0...v4.9.0) (2023-03-27)
 
 
