@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.13.0](https://github.com/somleng/somleng-node/compare/v4.12.0...v4.13.0) (2023-06-29)
+
+
+### Features
+
+* bump twilio from 4.12.0 to 4.13.0 ([0f1c4a6](https://github.com/somleng/somleng-node/commit/0f1c4a63a8ae53a1c0b406811ab78f7936846eff))
+
 ## [4.12.0](https://github.com/somleng/somleng-node/compare/v4.11.2...v4.12.0) (2023-06-16)
 
 
