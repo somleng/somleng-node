@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup Node
         uses: actions/setup-node@v3
@@ -39,7 +39,7 @@ jobs:
           release-as: ${{ steps.get_release_version.outputs.twilio_version }}
           token: ${{ secrets.SOMLENG_PERSONAL_ACCESS_TOKEN }}
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         if: ${{ steps.release.outputs.release_created }}
 
       - name: Setup Node
