@@ -1,5 +1,36 @@
 # Changelog
 
+## [4.20.0](https://github.com/somleng/somleng-node/compare/v1.0.0...v4.20.0) (2023-12-19)
+
+
+### Features
+
+* bump twilio from 4.10.0 to 4.11.0 ([a7f4d01](https://github.com/somleng/somleng-node/commit/a7f4d011dfe0536a74f90068e8e815ddbdee38e3))
+* bump twilio from 4.11.0 to 4.11.1 ([c8c1e81](https://github.com/somleng/somleng-node/commit/c8c1e81117879d34ccf27ca12534db096900d235))
+* bump twilio from 4.11.1 to 4.11.2 ([92acbb9](https://github.com/somleng/somleng-node/commit/92acbb905115381ffe47affce41f8ff3849ac38b))
+* bump twilio from 4.11.2 to 4.12.0 ([54a51cb](https://github.com/somleng/somleng-node/commit/54a51cb4e1a920655f6cd64bdcc24702c64828fa))
+* bump twilio from 4.12.0 to 4.13.0 ([0f1c4a6](https://github.com/somleng/somleng-node/commit/0f1c4a63a8ae53a1c0b406811ab78f7936846eff))
+* bump twilio from 4.13.0 to 4.14.0 ([5b95e24](https://github.com/somleng/somleng-node/commit/5b95e24209b7ab667b71638e9ba1ec2d7cd0a58a))
+* bump twilio from 4.14.0 to 4.14.1 ([4a1dde7](https://github.com/somleng/somleng-node/commit/4a1dde71bfa5674387a773aa53dd58e33b4c838a))
+* bump twilio from 4.14.1 to 4.15.0 ([bb2f698](https://github.com/somleng/somleng-node/commit/bb2f6981948b469fd5b6ba52ccc0be75b7aad7bd))
+* bump twilio from 4.15.0 to 4.16.0 ([38ce8d2](https://github.com/somleng/somleng-node/commit/38ce8d25681381e4ad21855ce054bb8a0cdbe3d7))
+* bump twilio from 4.16.0 to 4.17.0 ([3d27487](https://github.com/somleng/somleng-node/commit/3d27487da64690a3bdc4c6ea37f47aca1d01e491))
+* bump twilio from 4.17.0 to 4.18.0 ([e7ad0f3](https://github.com/somleng/somleng-node/commit/e7ad0f3c9aa28252c4f55649d77d3e503f8e436a))
+* bump twilio from 4.18.0 to 4.18.1 ([0d8ee06](https://github.com/somleng/somleng-node/commit/0d8ee06dbc466cf86328ad55b59fea7d433305e4))
+* bump twilio from 4.18.1 to 4.19.0 ([8bd0bfc](https://github.com/somleng/somleng-node/commit/8bd0bfcb1b4219a0f9c2871753ef852878acfa72))
+* bump twilio from 4.19.0 to 4.19.3 ([2ef3f52](https://github.com/somleng/somleng-node/commit/2ef3f52beeae7125e4bc8ffaae9eb188c1150eac))
+* bump twilio from 4.19.3 to 4.20.0 ([2acd18f](https://github.com/somleng/somleng-node/commit/2acd18f51c5d3e6197cbad12ed4cb4bc2d3374c4))
+* bump twilio from 4.9.0 to 4.10.0 ([fd24e12](https://github.com/somleng/somleng-node/commit/fd24e121784f5412b0cb33fd31bee467b07e629a))
+* Bump version ([0a132c1](https://github.com/somleng/somleng-node/commit/0a132c163cb34cc97a3808a46f7f6e23fcc98242))
+
+
+### Bug Fixes
+
+* bootstrap releases for path: . ([#117](https://github.com/somleng/somleng-node/issues/117)) ([fe2a576](https://github.com/somleng/somleng-node/commit/fe2a5761ad9c5c92d592fb24e8208372093f5f42))
+* release please ([d33eec2](https://github.com/somleng/somleng-node/commit/d33eec2920100010e4795b4394a43ac16f4206b1))
+* release please ([#120](https://github.com/somleng/somleng-node/issues/120)) ([c6c3bef](https://github.com/somleng/somleng-node/commit/c6c3bef9070a900a3ca4b84fd8272e2bcbaec5c6))
+* Release please action ([71931fc](https://github.com/somleng/somleng-node/commit/71931fc7dfb6242f4c4a0a84649d94792f55f9cb))
+
 ## 1.0.0 (2023-12-19)
 
 
