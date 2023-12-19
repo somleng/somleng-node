@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.21.1](https://github.com/somleng/somleng-node/compare/v4.21.0...v4.21.1) (2023-12-19)
+
+
+### Bug Fixes
+
+* bootstrap releases for path: . ([#117](https://github.com/somleng/somleng-node/issues/117)) ([fe2a576](https://github.com/somleng/somleng-node/commit/fe2a5761ad9c5c92d592fb24e8208372093f5f42))
+
 ## [4.21.0](https://github.com/somleng/somleng-node/compare/v4.20.0...v4.21.0) (2023-12-15)
 
 
