@@ -32,12 +32,15 @@ jobs:
           twilio_version=$(npm info twilio version | xargs echo)
           echo "twilio_version=$twilio_version" >> $GITHUB_OUTPUT
 
+      - name: "Set release version"
+        run: |
+          cat release-please-config.json | jq '. + { "release-as": "${{ steps.get_release_version.outputs.twilio_version }}" }' > release-please-config.json
+
       - uses: google-github-actions/release-please-action@v4
         id: release
         with:
-          release-type: node
-          release-as: ${{ steps.get_release_version.outputs.twilio_version }}
           token: ${{ secrets.SOMLENG_PERSONAL_ACCESS_TOKEN }}
+          config-file: release-please-config.json
 
       - uses: actions/checkout@v4
         if: ${{ steps.release.outputs.release_created }}
