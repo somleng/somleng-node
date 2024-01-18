@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.20.2](https://github.com/somleng/somleng-node/compare/v4.20.1...v4.20.2) (2024-01-18)
+
+
+### Bug Fixes
+
+* Release version 4.20.1.1 ([3e13ca2](https://github.com/somleng/somleng-node/commit/3e13ca24f194412459acc06044cade0dcd4ffd6d))
+
 ## [4.20.1](https://github.com/somleng/somleng-node/compare/v4.20.1...v4.20.1) (2024-01-18)
 
 
