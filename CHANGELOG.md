@@ -1,5 +1,23 @@
 # Changelog
 
+## [4.22.0](https://github.com/somleng/somleng-node/compare/v4.21.0...v4.22.0) (2024-02-12)
+
+
+### Features
+
+* bump twilio from 4.20.0 to 4.20.1 ([e38599e](https://github.com/somleng/somleng-node/commit/e38599e6b4dae1e4f598fb32d26440f59157dc44))
+* bump twilio from 4.20.1 to 4.21.0 ([79c6201](https://github.com/somleng/somleng-node/commit/79c620113708fc0cc5c311bdabd81022a5d94e65))
+* bump twilio from 4.21.0 to 4.22.0 ([346fe11](https://github.com/somleng/somleng-node/commit/346fe117cbb358f97c082dc9115b877044a9dba6))
+
+
+### Bug Fixes
+
+* bootstrap releases for path: . ([#117](https://github.com/somleng/somleng-node/issues/117)) ([fe2a576](https://github.com/somleng/somleng-node/commit/fe2a5761ad9c5c92d592fb24e8208372093f5f42))
+* release please ([d33eec2](https://github.com/somleng/somleng-node/commit/d33eec2920100010e4795b4394a43ac16f4206b1))
+* release please ([#120](https://github.com/somleng/somleng-node/issues/120)) ([c6c3bef](https://github.com/somleng/somleng-node/commit/c6c3bef9070a900a3ca4b84fd8272e2bcbaec5c6))
+* Release please action ([71931fc](https://github.com/somleng/somleng-node/commit/71931fc7dfb6242f4c4a0a84649d94792f55f9cb))
+* Release version 4.20.1.1 ([3e13ca2](https://github.com/somleng/somleng-node/commit/3e13ca24f194412459acc06044cade0dcd4ffd6d))
+
 ## [4.21.0](https://github.com/somleng/somleng-node/compare/v4.21.0...v4.21.0) (2024-02-02)
 
 
