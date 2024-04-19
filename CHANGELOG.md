@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.0.4](https://github.com/somleng/somleng-node/compare/v5.0.3...v5.0.4) (2024-04-19)
+
+
+### Features
+
+* bump twilio from 5.0.3 to 5.0.4 ([c4199b1](https://github.com/somleng/somleng-node/commit/c4199b1d9904b5026619b987f65f54e1180f1c15))
+
 ## [5.0.3](https://github.com/somleng/somleng-node/compare/v5.0.2...v5.0.3) (2024-04-05)
 
 
