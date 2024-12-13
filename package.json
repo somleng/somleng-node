@@ -34,7 +34,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "twilio": "^5.3.7"
+    "twilio": "^5.4.0"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.8",
