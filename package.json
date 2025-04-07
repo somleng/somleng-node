@@ -42,7 +42,7 @@
     "jest": "^29.5.0",
     "nock": "^14.0.2",
     "ts-jest": "^29.3.1",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.3"
   },
   "repository": {
     "type": "git",
