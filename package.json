@@ -40,7 +40,7 @@
     "@tsconfig/recommended": "^1.0.10",
     "@types/jest": "^30.0.0",
     "jest": "^30.0.5",
-    "nock": "^14.0.9",
+    "nock": "^14.0.10",
     "ts-jest": "^29.4.1",
     "typescript": "^5.9.2"
   },
