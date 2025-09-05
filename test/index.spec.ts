@@ -65,12 +65,12 @@ describe("Somleng", () => {
       .basicAuth({ user: "account-sid", pass: "auth-token" })
       .reply(200, { sid: "phone-call-id-123" });
 
-    const somleng = new Somleng("account-sid", "auth-token");
+    const somleng = new Somleng("account-sid", "auth-token")
 
-    const response = await somleng.calls("phone-call-id-123").fetch();
-    scope.done();
-
-    expect(response.sid).toEqual("phone-call-id-123");
+    const promise = somleng.calls("phone-call-id-123").fetch();
+    promise.then(function (response) {
+      expect(response.sid).toEqual("phone-call-id-123");
+    }).finally(() => scope.done())
   });
 
   it("should be able to fetch a verification", async () => {
@@ -80,10 +80,9 @@ describe("Somleng", () => {
       .reply(200, { sid: "verification-sid" });
 
     const somleng = new Somleng("account-sid", "auth-token");
-
-    const response = await somleng.verify.v2.services("verification-service-sid").verifications("verification-sid").fetch();
-    scope.done();
-
-    expect(response.sid).toEqual("verification-sid");
+    const promise = somleng.verify.v2.services("verification-service-sid").verifications("verification-sid").fetch();
+    promise.then(function (response) {
+      expect(response.sid).toEqual("verification-sid");
+    }).finally(() => scope.done())
   });
 });
