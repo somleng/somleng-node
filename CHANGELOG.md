@@ -1,5 +1,26 @@
 # Changelog
 
+## [5.9.0](https://github.com/somleng/somleng-node/compare/v5.4.2...v5.9.0) (2025-09-05)
+
+
+### Features
+
+* bump twilio from 5.4.2 to 5.4.3 ([6164e4a](https://github.com/somleng/somleng-node/commit/6164e4a828f3270ed57633866735117c3dcdb260))
+* bump twilio from 5.4.3 to 5.4.4 ([d01b2b3](https://github.com/somleng/somleng-node/commit/d01b2b35ed5a1f331c7fc1bf9014b534597fcbaf))
+* bump twilio from 5.4.4 to 5.4.5 ([1d69c3c](https://github.com/somleng/somleng-node/commit/1d69c3c7a01f1b3b36e3aed82a2f50533f0e1263))
+* bump twilio from 5.4.5 to 5.5.0 ([7728f86](https://github.com/somleng/somleng-node/commit/7728f865a1ff4afa1b45fe17ddecff71e516da4d))
+* bump twilio from 5.5.0 to 5.5.1 ([8efa385](https://github.com/somleng/somleng-node/commit/8efa385f6600f98c7459cd82a1a41e980d33116f))
+* bump twilio from 5.5.1 to 5.5.2 ([89868a0](https://github.com/somleng/somleng-node/commit/89868a058505980c2d3cfb26579673f02154279c))
+* bump twilio from 5.5.2 to 5.6.0 ([55d43df](https://github.com/somleng/somleng-node/commit/55d43df510e99c8163a1ac43ae2c59f9ccf68386))
+* bump twilio from 5.6.0 to 5.6.1 ([607c275](https://github.com/somleng/somleng-node/commit/607c275ef107208b5e45ac6a5d55c6a008fb2eda))
+* bump twilio from 5.6.1 to 5.7.0 ([1d02f25](https://github.com/somleng/somleng-node/commit/1d02f25bd7ddf48b9d4cc561ae67223bca915599))
+* bump twilio from 5.7.0 to 5.7.1 ([f73f060](https://github.com/somleng/somleng-node/commit/f73f06057c549ba3363035495e51264298e16fbb))
+* bump twilio from 5.7.1 to 5.7.2 ([42ab601](https://github.com/somleng/somleng-node/commit/42ab60194f9256b1bdaff61d7c13d9a2f0530c31))
+* bump twilio from 5.7.2 to 5.7.3 ([3599b9b](https://github.com/somleng/somleng-node/commit/3599b9b37379909d616fcb0ee12226d3f86f794f))
+* bump twilio from 5.7.3 to 5.8.0 ([661acd5](https://github.com/somleng/somleng-node/commit/661acd55659c24549a645f82b9eeffc76f0b9839))
+* bump twilio from 5.8.0 to 5.8.2 ([3587f77](https://github.com/somleng/somleng-node/commit/3587f778ab14f70270c8e2227489465db8a972eb))
+* bump twilio from 5.8.2 to 5.9.0 ([654101a](https://github.com/somleng/somleng-node/commit/654101ad7807cc9810e4b8fd59858e27e80ca253))
+
 ## [5.4.2](https://github.com/somleng/somleng-node/compare/v5.4.1...v5.4.2) (2025-01-14)
 
 
