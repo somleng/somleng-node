@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v5
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version-file: ".tool-versions"
           cache: 'npm'
@@ -46,7 +46,7 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         if: ${{ steps.release.outputs.release_created }}
         with:
           node-version-file: ".tool-versions"
