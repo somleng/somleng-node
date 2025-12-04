@@ -58,6 +58,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
+          npm install -g npm@latest
           npm ci
           npm run build
           npm publish
