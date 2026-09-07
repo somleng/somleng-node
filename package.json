@@ -39,7 +39,7 @@
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.13",
     "@types/jest": "^30.0.0",
-    "jest": "^30.5.0",
+    "jest": "^30.5.1",
     "nock": "^14.0.17",
     "ts-jest": "^29.4.12",
     "typescript": "^7.0.2"
